@@ -40,22 +40,43 @@ export const resumeData: ResumeData = {
                 "지침서·절차서 등 업무 문서의 등록·다운로드 기능 설계·개발",
                 "ExtJS 4.2 기반 화면 개발 및 UI/UX 개선"
             ]
+        },
+        {
+            company: "중앙정보처리학원",
+            position: "수료",
+            startDate: "2024.12.31",
+            endDate: "2025.05.30",
+            description: [
+                "Java, Spring Boot를 사용한 웹 애플리케이션 개발",
+                "Docker, aws를 사용한 서버 관리",
+                "(추후에 기술할 예정)"
+            ]
         }
     ],
     skillCategory: [
         {
             category: "Frontend",
-            skills: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+            skills: ["React", "TypeScript", "Next.js", "HTML", "CSS", "JavaScript", "Tailwind CSS"],
             color: "blue"
         },
         {
             category: "Backend",
-            skills: ["Node.js"],
+            skills: ["Java", "Spring Boot", "Node.js", "JSP"],
             color: "green"
         },
         {
+            category: "Database",
+            skills: ["MySQL", "Oracle", "SQL"],
+            color: "yellow"
+        },
+        {
+            category: "Cloud / DevOps",
+            skills: ["AWS", "Docker", "CI/CD"],
+            color: "orange"
+        },
+        {
             category: "Tools",
-            skills: ["VSCode", "Cursor"],
+            skills: ["Git", "GitHub", "VSCode", "Cursor"],
             color: "purple"
         }
     ]
