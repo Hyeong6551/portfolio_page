@@ -1,31 +1,35 @@
+/* 경력 */
 export interface WorkExperience {
-    company: string;
-    position: string;
-    startDate: string;
-    endDate: string;
-    description: string[];
+    company: string;        // 회사명
+    position: string;       // 직책
+    startDate: string;      // 시작일
+    endDate: string;        // 종료일
+    description: string[];  // 설명
 }
 
+/* 기술 스택 */
 export interface SkillCategory {
-    category: string;
-    skills: string[];
+    category: string;       // 카테고리
+    skills: string[];       // 기술 스택
     color: 'blue' | 'green' | 'yellow' | 'red' | 'purple' | 'pink' | 'orange' | 'gray';
 }
 
+/* 이력서 */
 export interface ResumeData {
-    name: string;
-    title: string;
-    bio: string;
-    email: string;
-    github: string;
+    name: string;          // 이름
+    title: string;         // 직책
+    bio: string;           // 자기소개
+    email: string;         // 이메일
+    github: string;        // 깃허브
     workExperience: WorkExperience[];
     skillCategory: SkillCategory[];
 }
 
+/* 이력서 데이터 */
 export const resumeData: ResumeData = {
     name: "조세형",
     title: "프론트엔드 개발자",
-    bio: "React와 TypeScript를 사용한 웹 개발에 관심이 많은 개발자입니다.",
+    bio: "일단 만들고, 부딪히고, 될 때까지 개선하는 개발자입니다.",
     email: "tpgud3331@gmail.com",
     github: "https://github.com/hyeong6551",
     workExperience: [
@@ -56,12 +60,12 @@ export const resumeData: ResumeData = {
     skillCategory: [
         {
             category: "Frontend",
-            skills: ["React", "TypeScript", "Next.js", "HTML", "CSS", "JavaScript", "Tailwind CSS"],
+            skills: ["React", "TypeScript", "Next.js", "ExtJS", "HTML", "CSS", "JavaScript", "Tailwind CSS"],
             color: "blue"
         },
         {
             category: "Backend",
-            skills: ["Java", "Spring Boot", "Node.js", "JSP"],
+            skills: ["Java", "Spring Boot", "Node.js"],
             color: "green"
         },
         {
@@ -71,13 +75,14 @@ export const resumeData: ResumeData = {
         },
         {
             category: "Cloud / DevOps",
-            skills: ["AWS", "Docker", "CI/CD"],
+            skills: ["AWS", "Docker", "CI/CD", "Apache Tomcat"],
             color: "orange"
         },
         {
             category: "Tools",
-            skills: ["Git", "GitHub", "VSCode", "Cursor"],
+            skills: ["Eclipse", "VSCode", "Cursor", "Git", "SVN", "Maven"],
             color: "purple"
         }
     ]
 }
+

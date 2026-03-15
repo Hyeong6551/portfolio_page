@@ -58,7 +58,8 @@ export default function SkillsList({ skillCategories }: Props) {
                                 return (
                                     <span
                                         key={i}
-                                        className={`px-3 py-1 ${colors.bg} ${colors.text} rounded-full text-sm`}
+                                        className={`px-3 py-1 ${colors.bg} ${colors.text} rounded-full text-sm
+                                                    hover:scale-105 transition-transform duration-200 cursor-default`}
                                     >
                                         {skill}
                                     </span>

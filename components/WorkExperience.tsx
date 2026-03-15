@@ -15,16 +15,19 @@ export default function WorkExperience({ experiences }: Props) {
                 {experiences.map((exp, index) => (
                     <div
                         key={index}
-                        className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6"
+                        className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6
+                                   hover:shadow-lg transition-shadow duration-300"
                     >
-                        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                            {exp.company}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
+                        <div className="flex justify-between items-start mb-1">
+                            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                                {exp.company}
+                            </h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap ml-4">
+                                {exp.startDate} - {exp.endDate}
+                            </span>
+                        </div>
+                        <p className="text-blue-600 dark:text-blue-400 text-sm mb-4">
                             {exp.position}
-                        </p>
-                        <p className="text-sm text-gray-500 dark:text-gray-500 mb-3">
-                            {exp.startDate} - {exp.endDate}
                         </p>
                         <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
                             {exp.description.map((item, i) => (

@@ -2,6 +2,17 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 텍스트 선택 시 색상 */
+::selection {
+  @apply bg-blue-200 dark:bg-blue-800 text-gray-900 dark:text-white;
 }
