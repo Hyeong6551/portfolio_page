@@ -14,7 +14,7 @@ export interface Projects {
 
 export const projects: Projects[] = [
     {
-        slug: "project-1",
+        slug: "1",
         title: "프로젝트명",
         description: "프로젝트 설명",
         details: "상세 설명",
@@ -29,7 +29,7 @@ export const projects: Projects[] = [
         githubUrl: "https://github.com/hyeong6551/project"
     },
     {
-        slug: "project-2",
+        slug: "2",
         title: "프로젝트명",
         description: "프로젝트 설명",
         details: "상세 설명",
@@ -44,7 +44,7 @@ export const projects: Projects[] = [
         githubUrl: "https://github.com/hyeong6551/project"
     },
     {
-        slug: "project-3",
+        slug: "3",
         title: "프로젝트명",
         description: "프로젝트 설명",
         details: "상세 설명",
