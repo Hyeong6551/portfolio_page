@@ -1,31 +1,30 @@
-/* 경력 */
+// 경력 정보
 export interface WorkExperience {
-    company: string;        // 회사명
-    position: string;       // 직책
-    startDate: string;      // 시작일
-    endDate: string;        // 종료일
-    description: string[];  // 설명
+    company: string;
+    position: string;
+    startDate: string;      // YYYY.MM
+    endDate: string;        // YYYY.MM or "재직중"
+    description: string[];
 }
 
-/* 기술 스택 */
+// 기술 스택 카테고리
 export interface SkillCategory {
-    category: string;       // 카테고리
-    skills: string[];       // 기술 스택
+    category: string;
+    skills: string[];
     color: 'blue' | 'green' | 'yellow' | 'red' | 'purple' | 'pink' | 'orange' | 'gray';
 }
 
-/* 이력서 */
+// 이력서 데이터
 export interface ResumeData {
-    name: string;          // 이름
-    title: string;         // 직책
-    bio: string;           // 자기소개
-    email: string;         // 이메일
-    github: string;        // 깃허브
+    name: string;
+    title: string;
+    bio: string;
+    email: string;
+    github: string;
     workExperience: WorkExperience[];
     skillCategory: SkillCategory[];
 }
 
-/* 이력서 데이터 */
 export const resumeData: ResumeData = {
     name: "조세형",
     title: "프론트엔드 개발자",

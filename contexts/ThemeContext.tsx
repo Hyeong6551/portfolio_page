@@ -9,10 +9,12 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+// 테마 관리 Provider (localStorage + 시스템 설정 반영)
 export function ThemeProvider({ children }: { children: ReactNode }) {
     const [theme, setTheme] = useState<Theme>('light');
     const [mounted, setMounted] = useState(false);
 
+    // 초기 테마 로드 (localStorage > 시스템 설정)
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') as Theme | null;
 
@@ -26,6 +28,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         setMounted(true);
     }, []);
 
+    // 테마 변경 시 localStorage 저장 + HTML 클래스 적용
     useEffect(() => {
         if (mounted) {
             localStorage.setItem('theme', theme);
@@ -41,8 +44,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         setTheme(prev => prev === 'light' ? 'dark' : 'light');
     };
 
-    // ✅ SSR 개선: return null 제거
-    // 서버에서도 children을 렌더링하여 검색 엔진이 컨텐츠를 볼 수 있도록 함
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             {children}

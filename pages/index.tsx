@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{resumeData.name} | {resumeData.title}</title>
+        <title>{`${resumeData.name} | ${resumeData.title}`}</title>
         <meta name="description" content={resumeData.bio} />
         <link rel="icon" href="/favicon.ico" />
       </Head>

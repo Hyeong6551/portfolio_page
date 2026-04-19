@@ -2,8 +2,24 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Projects } from '@/data/projects';
 
+/**
+ * ProjectCard 컴포넌트
+ *
+ * 프로젝트 목록에서 각 프로젝트를 카드 형태로 표시합니다.
+ * 클릭 시 프로젝트 상세 페이지로 이동합니다.
+ *
+ * @UI구성
+ * 1. 썸네일 이미지 (imageUrl이 있으면 표시, 없으면 그라디언트 배경)
+ * 2. 프로젝트 제목 + 개발 기간
+ * 3. 간단한 설명
+ * 4. 기술 스택 배지
+ *
+ * @인터랙션
+ * - hover: 카드 확대 + 그림자 강조
+ * - 이미지 hover: 약간 확대 (줌인 효과)
+ */
 interface Props {
-    project: Projects;
+    project: Projects; // 표시할 프로젝트 데이터
 }
 
 export default function ProjectCard({ project }: Props) {
@@ -13,9 +29,10 @@ export default function ProjectCard({ project }: Props) {
             className="block bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden
                  hover:shadow-xl hover:scale-[1.01] transition-all duration-300"
         >
-            {/* 이미지 영역 */}
+            {/* 썸네일 이미지 영역 */}
             <div className="overflow-hidden">
                 {project.imageUrl ? (
+                    // Next.js Image 컴포넌트: 자동 최적화 (AVIF, WebP)
                     <Image
                         src={project.imageUrl}
                         alt={project.title}
@@ -25,6 +42,7 @@ export default function ProjectCard({ project }: Props) {
                        hover:scale-105 transition-transform duration-300"
                     />
                 ) : (
+                    // 이미지가 없을 경우: 그라디언트 배경 + 첫 글자 표시
                     <div className="w-full h-52 bg-gradient-to-br from-blue-400 to-purple-500
                           flex items-center justify-center">
                         <span className="text-white text-4xl font-bold opacity-50">
@@ -34,8 +52,9 @@ export default function ProjectCard({ project }: Props) {
                 )}
             </div>
 
-            {/* 정보 영역 */}
+            {/* 프로젝트 정보 영역 */}
             <div className="p-6">
+                {/* 제목 + 개발 기간 */}
                 <div className="flex justify-between items-start mb-2">
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                         {project.title}
@@ -45,10 +64,12 @@ export default function ProjectCard({ project }: Props) {
                     </span>
                 </div>
 
+                {/* 프로젝트 간단 설명 */}
                 <p className="text-gray-600 dark:text-gray-400 mt-2">
                     {project.description}
                 </p>
 
+                {/* 기술 스택 배지 */}
                 <div className="flex flex-wrap gap-2 mt-3">
                     {project.skillStack.map((tech) => (
                         <span

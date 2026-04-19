@@ -1,5 +1,6 @@
 import { useTheme } from '@/contexts/ThemeContext';
 
+// 다크모드 토글 버튼 (우측 상단 고정)
 export default function ThemeToggle() {
     const { theme, toggleTheme } = useTheme();
 

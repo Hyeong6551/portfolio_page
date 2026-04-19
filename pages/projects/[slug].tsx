@@ -12,7 +12,7 @@ export default function ProjectDetail({ project }: Props) {
     return (
         <>
             <Head>
-                <title>{project.title} | 조세형</title>
+                <title>{`${project.title} | 조세형`}</title>
                 <meta name="description" content={project.description} />
             </Head>
 

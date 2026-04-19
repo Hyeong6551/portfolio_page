@@ -1,9 +1,9 @@
-/* 프로젝트 */
+// 프로젝트 데이터 타입
 export interface Projects {
-    slug: string;           // URL 경로용 (영문, 고유값)
+    slug: string;              // URL 경로용
     title: string;
-    description: string;
-    details: string;
+    description: string;       // 카드 표시용 한 줄 설명
+    details: string;           // 상세 페이지 설명
     skillStack: string[];
     developmentPeriod: string;
     task: string[];
@@ -18,7 +18,7 @@ export const projects: Projects[] = [
         title: "MSA 기반 학습관리시스템 (LMS)",
         description: "마이크로서비스 아키텍처 기반의 확장 가능한 학습 관리 플랫폼",
         details: "Spring Cloud를 활용한 MSA 아키텍처로 구현된 엔터프라이즈급 학습 관리 시스템입니다. 강의 관리, 시험, 채팅, 리뷰 등 각 도메인을 독립적인 서비스로 분리하여 확장성과 유지보수성을 높였습니다. Eureka 서비스 디스커버리, Spring Cloud Gateway API 라우팅, Redis 캐싱, JWT 인증 등 MSA의 핵심 패턴을 적용했으며, React + TypeScript 기반의 현대적인 프론트엔드를 구축했습니다.",
-        skillStack: ["Java", "Spring Boot", "Spring Cloud", "React", "TypeScript", "Material-UI", "Vite", "MySQL", "Redis", "Eureka", "Docker", "Nginx", "JWT"],
+        skillStack: ["Java", "Spring Boot", "Spring Cloud", "JPA", "MySQL", "Redis", "React", "TypeScript", "Material-UI", "Redux Toolkit", "Vite", "Eureka", "Docker", "Nginx", "JWT"],
         developmentPeriod: "2024.04 ~ 2024.05",
         task: [
             "MSA 아키텍처 설계 및 독립적인 마이크로서비스 구축",
@@ -29,6 +29,7 @@ export const projects: Projects[] = [
             "React + TypeScript + Vite 기반 SPA 개발 (Material-UI)",
             "Docker 컨테이너화, Nginx 리버스 프록시 설정, AWS 배포"
         ],
+        imageUrl: "https://img.youtube.com/vi/HRSy0bXYzL4/maxresdefault.jpg",
         githubUrl: "https://github.com/Hyeong6551/MSA_LMS_projects",
         demoUrl: "https://youtu.be/HRSy0bXYzL4"
     },
@@ -37,7 +38,7 @@ export const projects: Projects[] = [
         title: "MSA 기반 여행 패키지 예약 플랫폼",
         description: "Vue.js와 Spring Boot MSA로 구현한 여행 예약 서비스",
         details: "마이크로서비스 아키텍처로 설계된 여행 패키지 예약 플랫폼입니다. 사용자는 여행 상품을 검색하고 예약할 수 있으며, 관리자는 상품과 회원을 관리할 수 있습니다. Spring Cloud Gateway와 Eureka를 통한 서비스 디스커버리, JWT 인터셉터 기반 인증, Vue.js Composition API를 활용한 반응형 UI가 특징입니다.",
-        skillStack: ["Vue.js", "Composition API", "Bootstrap 5", "Spring Boot", "MyBatis", "H2 Database", "Spring Cloud Gateway", "Eureka", "JWT"],
+        skillStack: ["Vue.js", "Bootstrap 5", "Vite", "Pinia", "Spring Boot", "JPA", "H2 Database", "Spring Cloud Gateway", "Eureka", "JWT"],
         developmentPeriod: "2025.03 ~ 2025.04",
         task: [
             "MSA 아키텍처 설계 및 마이크로서비스 간 통신 구현",
@@ -47,6 +48,7 @@ export const projects: Projects[] = [
             "관리자 대시보드 개발 (회원 관리, 상품 관리, 공지사항)",
             "MyBatis 동적 쿼리 작성, Bootstrap 5 반응형 디자인"
         ],
+        imageUrl: "https://img.youtube.com/vi/kbE0Xgdu3rc/maxresdefault.jpg",
         githubUrl: "https://github.com/Hyeong6551/project-travel",
         demoUrl: "https://youtu.be/kbE0Xgdu3rc"
     },
