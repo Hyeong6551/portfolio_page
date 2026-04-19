@@ -41,8 +41,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         setTheme(prev => prev === 'light' ? 'dark' : 'light');
     };
 
-    if (!mounted) { return null; }
-
+    // ✅ SSR 개선: return null 제거
+    // 서버에서도 children을 렌더링하여 검색 엔진이 컨텐츠를 볼 수 있도록 함
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             {children}

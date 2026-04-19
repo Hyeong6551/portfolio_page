@@ -52,8 +52,9 @@ export const resumeData: ResumeData = {
             endDate: "2025.05.30",
             description: [
                 "Java, Spring Boot를 사용한 웹 애플리케이션 개발",
-                "Docker, aws를 사용한 서버 관리",
-                "(추후에 기술할 예정)"
+                "Docker, AWS를 사용한 서버 배포 및 관리",
+                "React, TypeScript를 활용한 프론트엔드 개발 실습",
+                "팀 프로젝트를 통한 협업 및 Git 버전 관리 경험"
             ]
         }
     ],
