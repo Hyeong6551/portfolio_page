@@ -29,7 +29,7 @@ export const projects: Projects[] = [
             "React + TypeScript + Vite 기반 SPA 개발 (Material-UI)",
             "Docker 컨테이너화, Nginx 리버스 프록시 설정, AWS 배포"
         ],
-        imageUrl: "https://img.youtube.com/vi/HRSy0bXYzL4/maxresdefault.jpg",
+        imageUrl: "https://img.youtube.com/vi/HRSy0bXYzL4/hqdefault.jpg",
         githubUrl: "https://github.com/Hyeong6551/MSA_LMS_projects",
         demoUrl: "https://youtu.be/HRSy0bXYzL4"
     },
@@ -48,7 +48,7 @@ export const projects: Projects[] = [
             "관리자 대시보드 개발 (회원 관리, 상품 관리, 공지사항)",
             "MyBatis 동적 쿼리 작성, Bootstrap 5 반응형 디자인"
         ],
-        imageUrl: "https://img.youtube.com/vi/kbE0Xgdu3rc/maxresdefault.jpg",
+        imageUrl: "https://img.youtube.com/vi/kbE0Xgdu3rc/hqdefault.jpg",
         githubUrl: "https://github.com/Hyeong6551/project-travel",
         demoUrl: "https://youtu.be/kbE0Xgdu3rc"
     },

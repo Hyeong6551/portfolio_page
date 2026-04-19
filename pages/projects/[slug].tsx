@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
+import ProjectImage from '@/components/ProjectImage';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { projects, Projects } from '@/data/projects';
 
@@ -28,22 +28,12 @@ export default function ProjectDetail({ project }: Props) {
 
                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
                         {/* 이미지 */}
-                        {project.imageUrl ? (
-                            <Image
-                                src={project.imageUrl}
-                                alt={project.title}
-                                width={800}
-                                height={400}
-                                className="w-full h-64 object-cover"
-                            />
-                        ) : (
-                            <div className="w-full h-64 bg-gradient-to-br from-blue-400 to-purple-500
-                                            flex items-center justify-center">
-                                <span className="text-white text-6xl font-bold opacity-50">
-                                    {project.title.charAt(0)}
-                                </span>
-                            </div>
-                        )}
+                        <ProjectImage
+                            src={project.imageUrl}
+                            alt={project.title}
+                            heightClass="h-64"
+                            letterSizeClass="text-6xl"
+                        />
 
                         <div className="p-8">
                             {/* 제목 + 기간 */}

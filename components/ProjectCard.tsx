@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import ProjectImage from '@/components/ProjectImage';
 import { Projects } from '@/data/projects';
 
 /**
@@ -31,25 +31,13 @@ export default function ProjectCard({ project }: Props) {
         >
             {/* 썸네일 이미지 영역 */}
             <div className="overflow-hidden">
-                {project.imageUrl ? (
-                    // Next.js Image 컴포넌트: 자동 최적화 (AVIF, WebP)
-                    <Image
-                        src={project.imageUrl}
-                        alt={project.title}
-                        width={800}
-                        height={400}
-                        className="w-full h-52 object-cover
-                       hover:scale-105 transition-transform duration-300"
-                    />
-                ) : (
-                    // 이미지가 없을 경우: 그라디언트 배경 + 첫 글자 표시
-                    <div className="w-full h-52 bg-gradient-to-br from-blue-400 to-purple-500
-                          flex items-center justify-center">
-                        <span className="text-white text-4xl font-bold opacity-50">
-                            {project.title.charAt(0)}
-                        </span>
-                    </div>
-                )}
+                <ProjectImage
+                    src={project.imageUrl}
+                    alt={project.title}
+                    heightClass="h-52"
+                    letterSizeClass="text-4xl"
+                    imageClassName="hover:scale-105 transition-transform duration-300"
+                />
             </div>
 
             {/* 프로젝트 정보 영역 */}
