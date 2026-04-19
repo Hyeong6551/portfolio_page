@@ -5,7 +5,6 @@ import SkillList from '@/components/SkillList';
 import ProjectCard from '@/components/ProjectCard';
 import { resumeData } from '@/data/resume';
 import { projects } from '@/data/projects';
-import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Home() {
   return (
@@ -16,10 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* 다크 모드 토글 */}
-      <ThemeToggle />
-
-      <main className="min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* 헤더 섹션 */}
           <Header
@@ -48,7 +44,7 @@ export default function Home() {
           {/* 기술 스택 섹션 */}
           <SkillList skillCategories={resumeData.skillCategory} />
         </div>
-      </main >
+      </div>
     </>
   );
 }

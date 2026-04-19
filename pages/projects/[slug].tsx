@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { projects, Projects } from '@/data/projects';
-import ThemeToggle from '@/components/ThemeToggle';
 
 interface Props {
     project: Projects;
@@ -17,9 +16,7 @@ export default function ProjectDetail({ project }: Props) {
                 <meta name="description" content={project.description} />
             </Head>
 
-            <ThemeToggle />
-
-            <main className="min-h-screen px-4 sm:px-6 lg:px-8">
+            <div className="px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto py-8">
                     <Link href="/" className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400
                                        hover:text-blue-800 dark:hover:text-blue-300 transition-colors mb-6">
@@ -128,7 +125,7 @@ export default function ProjectDetail({ project }: Props) {
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
         </>
     );
 }
