@@ -3,7 +3,11 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="ko">
-      <Head />
+      <Head>
+        {/* ✅ 검색엔진 색인 차단 (noindex) */}
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
+      </Head>
       <body className="antialiased">
         {/* ✅ FOUC 방지: 페이지 로드 즉시 테마 적용 */}
         <script
